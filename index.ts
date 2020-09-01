@@ -8,7 +8,7 @@ class SCMItem {
     priceSnapshots: PriceSnapshot[];
 
     constructor({ market_hash_name, appid, icon_url, type, descriptions }: ItemInfo, priceSnapshots: PriceSnapshot[]) {
-        this.item = { market_hash_name, appid, icon_url, type, descriptions };
+        this.item = { market_hash_name, appid, icon_url: `https://community.cloudflare.steamstatic.com/economy/image/${icon_url}`, type, descriptions };
         this.priceSnapshots = priceSnapshots;
     }
 
