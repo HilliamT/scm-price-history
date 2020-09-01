@@ -1,0 +1,8 @@
+# Node modules
+node_modules/
+
+# Typescript Pre-compiled files
+index.ts
+example.ts
+types/
+tsconfig.json
