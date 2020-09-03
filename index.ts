@@ -19,7 +19,8 @@ class SCMItem {
 
     getPriceHistory(): PriceHistory {
         let priceHistory = {};
-        return this.priceSnapshots.map((snapshot) => priceHistory[snapshot.time] = snapshot);
+        this.priceSnapshots.map((snapshot) => priceHistory[snapshot.time] = snapshot);
+        return priceHistory;
     }
 
     getPriceSnapshots(): PriceSnapshot[] {
