@@ -28,9 +28,9 @@ class SCMItem {
     }
 }
 
-export async function getItemOnSCM(market_hash_name: string, appid: string): Promise<SCMItem> {
+export async function getItemOnSCM(market_hash_name: string, appid: string, language: string = ""): Promise<SCMItem> {
     // Fetch the item's market page
-    let url = `https://steamcommunity.com/market/listings/${appid}/${encodeURI(market_hash_name)}`;
+    let url = `https://steamcommunity.com/market/listings/${appid}/${encodeURI(market_hash_name)}?l=${language}`;
     let html = (await axios.get(url)).data;
     let $ = require("cheerio").load(html);
 
